@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <style>
+            body, html{
+                margin:0px;
+                padding:0px;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+
+            .topnav{
+                background-color: #373737;
+                position:fixed;
+                top:0px;
+                width:100%;
+            }
+
+            .home {
+                height: 100vh;
+                background: url("assets/portfolio-background.jpg") 50% fixed;
+                background-size: cover;
+                color: #fff;
+            }
+            .centerInner{
+                display: flex;
+                align-items: center;
+            }
+            .home-text{
+                margin-left:40px;
+            }
+            .home-resume{
+                border:3px solid white;
+                border-radius:8px;
+                padding:8px 13px;
+                font-size:31px;
+                text-decoration: none;
+                color:white;
+            }
+            .home-resume:hover{
+                text-decoration: underline;
+            }
+
+            .projects{
+                background-color:black;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            .projects-grid{
+                margin-bottom:120px;
+            }
+            .projects-ex{
+                border:2px solid white;
+                margin:20px 16px;
+                padding:25px;
+                border-radius:12px;
+                text-align:center;
+                display:flex;
+                align-items: center;
+            }
+            .project-element{
+                display:inline-block;
+                margin:50px;
+                text-align:left;
+            }
+            .smaller{
+                max-width: 400px;
+            }
+
+            .skills{
+                background-color: black;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+            .skills-grid{
+                margin-bottom:120px;
+            }
+            .skills-type{
+                float:left;
+                padding:10px;
+                margin:20px 20px;
+                padding:20px;
+                margin:auto;
+            }
+
+            .about{
+                min-height: 100vh;
+                background-color:black;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .about-p{
+                float:left;
+                max-width:340px;
+                margin:20px;
+            }
+
+            .contact{
+                height:100vh;
+                background-color:black;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            @media screen and (max-width: 1024px) {
+                .topnav-hidden {
+                    display: none !important;
+                }
+
+                .projects-grid{
+                    max-width: 340px;
+                }
+                .projects-ex{
+                    max-width: 340px;
+                    flex-direction: column;
+                }
+                .project-element{
+                    margin:10px;
+                }
+                .project-element img{
+                    height:150px;
+                }
+
+                
+                .home-text{
+                    margin-top: 20px;
+                    margin:auto;
+                    text-align:center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <h2 style="color:white; margin:30px 25px; float:left; font-size:26px" class="topnav-hidden">Georgi Dimitrov</h2>
+            <a href="#contact" style="float: right; text-decoration: none; color:white; margin:35px 10px; font-size:23px;">Contact</a>
+            <a href="#about" style="float: right; text-decoration: none; color:white; margin:35px 10px; font-size:23px">About</a>
+            <a href="#projects" style="float: right; text-decoration: none; color:white; margin:35px 10px; font-size:23px">Projects</a>
+            <a href="#skills" style="float: right; text-decoration: none; color:white; margin:35px 5px; font-size:23px">Skills</a>
+        </div>
+
+        <div class="home centerInner">
+            <div class="home-text">
+                <h1 style="color:white; font-size:48px;">GEORGI DIMITROV</h1>
+                <h2 style="color:white; font-size:34px;">Software Engineer specializing in Web Development</h2>
+                <a class="home-resume" href="assets/resume.pdf" download>Resume</a>
+            </div>
+        </div>
+
+        <div class="skills" id="skills">
+            <h1 style="font-size:58px; border-bottom:5px solid white; margin-top:120px; margin-bottom:50px; color:white;">Skills</h1>
+            <div class="skills-grid">
+                <div class="skills-type">
+                    <b><p style="font-size:35px; border-bottom:3px solid white; color:white;">Frontend</p></b>
+                    <ul style="font-size:27px; color:white;">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>AJAX</li>
+                        <li>jQuery</li>
+                    </ul>
+                </div>
+                <div class="skills-type">
+                    <b><p style="font-size:35px; border-bottom:3px solid white; color:white;">Backend</p></b>
+                    <ul style="font-size:27px; color:white;">
+                        <li>Django</li>
+                        <li>Celery</li>
+                        <li>SQLite3</li>
+                    </ul>
+                </div>
+                <div class="skills-type">
+                    <b><p style="font-size:35px; border-bottom:3px solid white; color:white;">Programming languages</p></b>
+                    <ul style="font-size:27px; color:white;">
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>java</li>
+                    </ul>
+                </div>
+                <div class="skills-type">
+                    <b><p style="font-size:35px; border-bottom:3px solid white; color:white;">Libraries</p></b>
+                    <ul style="font-size:27px; color:white;">
+                        <li>Pygame</li>
+                        <li>BeautifulSoup</li>
+                    </ul>
+                </div>
+                <div class="skills-type">
+                    <b><p style="font-size:35px; border-bottom:3px solid white; color:white;">Other</p></b>
+                    <ul style="font-size:27px; color:white;">
+                        <li>Git/GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects" id="projects">
+            <h1 style="color:white; margin-top:120px; margin-bottom:50px; font-size:58px; border-bottom:5px solid white;">Projects</h1>
+            <div class="projects-grid">
+                <div class="projects-ex">
+                    <div class="project-element">
+                        <img height="220px" src="assets/bulkbazar.png">
+                        <br>
+                        <a href="https://www.bulkbazar.in/" style="color:rgb(72, 72, 196); text-decoration: none; font-size:29px;" target="_blank">Live Demo</a>
+                        <br>
+                        <p style="color:white; font-size:29px;">Code is not available due to NDA</p>
+                        <br>
+                    </div>
+                    <div class="project-element">
+                        <b><p style="color:white; font-size:27px;">Skills:</p></b>
+                        <ul style="color:white; font-size:24px;">
+                            <li>Django</li>
+                            <li>Celery</li>
+                            <li>HTML+CSS</li>
+                            <li>JavaScript</li>
+                            <li>AJAX</li>
+                            <li>jQuery</li>
+                            <li>Version control (GitHub)</li>
+                        </ul>
+                    </div>
+                    <div class="project-element smaller">
+                        <b><p style="color:white; font-size:27px;">About this project:</p></b>
+                        <p style="color:white; font-size:24px;">This project is a production ready eCommerce platform that I developed on my first job. I did the backend on my own from scratch using Django and Celery. I worked together with a team to develop the frontend using HTML, CSS, JavaScript, AJAX and jQuery.</p>
+                    </div>
+                </div>
+                <div class="projects-ex">
+                    <div class="project-element">
+                        <img height="220px" src="assets/deenie.png">
+                        <br>
+                        <a href="https://deenie.herokuapp.com/" style="color:rgb(72, 72, 196); text-decoration: none; font-size:29px;" target="_blank">Live Demo</a>
+                        <br>
+                        <a href="https://github.com/G060N0FF/Deenie" style="color:rgb(72, 72, 196); text-decoration: none; font-size:29px;" target="_blank">View Code</a>
+                        <br>
+                    </div>
+                    <div class="project-element">
+                        <b><p style="color:white; font-size:27px;">Skills:</p></b>
+                        <ul style="color:white; font-size:24px;">
+                            <li>Django</li>
+                            <li>HTML+CSS</li>
+                            <li>Youtube Data API and pytube</li>
+                            <li>Spotipy</li>
+                            <li>Webscraping</li>
+                        </ul>
+                    </div>
+                    <div class="project-element smaller">
+                        <b><p style="color:white; font-size:27px;">About this project:</p></b>
+                        <p style="color:white; font-size:24px;">This project is a Spotify clone.  The user can create playlists and add songs to them. The user can also search for music, artists and albums as well as get details about them and play and download songs. The user also gets songs recommendations based on the ones that have already been heard.</p>
+                    </div>
+                </div>
+                <div class="projects-ex">
+                    <div class="project-element">
+                        <img height="220px" src="assets/picpost.png">
+                        <br>
+                        <a href="https://picpostsite.herokuapp.com/" style="color:rgb(72, 72, 196); text-decoration: none; font-size:29px;" target="_blank">Live Demo</a>
+                        <br>
+                        <a href="https://github.com/G060N0FF/PicPost" style="color:rgb(72, 72, 196); text-decoration: none; font-size:29px;" target="_blank">View Code</a>
+                        <br>
+                    </div>
+                    <div class="project-element">
+                        <b><p style="color:white; font-size:26px;">Skills:</p></b>
+                        <ul style="color:white; font-size:24px;">
+                            <li>Django</li>
+                            <li>HTML+CSS</li>
+                            <li>JavaScript</li>
+                            <li>Websockets</li>
+                            <li>Django Channels</li>
+                            <li>AJAX</li>
+                        </ul>
+                    </div>
+                    <div class="project-element smaller">
+                        <b><p style="color:white; font-size:27px;">About this project:</p></b>
+                        <p style="color:white; font-size:24px;">This project is an Instagram clone. Every user can post, like and comment pictures with captions. The users can also search for posts and other users and then follow them or message them. This project has all the basic functionality of any social media app.</p>
+                    </div>
+                </div>
+                <div class="projects-ex">
+                    <div class="project-element">
+                        <img height="220px" src="assets/essential.png">
+                        <br>
+                        <a href="https://essentialtodo.herokuapp.com/" style="color:rgb(72, 72, 196); text-decoration: none; font-size:29px;" target="_blank">Live Demo</a>
+                        <br>
+                        <a href="https://github.com/G060N0FF/Essential" style="color:rgb(72, 72, 196); text-decoration: none; font-size:29px;" target="_blank">View Code</a>
+                        <br>
+                    </div>
+                    <div class="project-element">
+                        <b><p style="color:white; font-size:26px;">Skills:</p></b>
+                        <ul style="color:white; font-size:24px;">
+                            <li>Django</li>
+                            <li>HTML+CSS</li>
+                            <li>JavaScript</li>
+                            <li>AJAX</li>
+                        </ul>
+                    </div>
+                    <div class="project-element smaller">
+                        <b><p style="color:white; font-size:27px;">About this project:</p></b>
+                        <p style="color:white; font-size:24px;">This is a project that I use to organize my day. It has a to-do tracker (tasks you have to do until a certain date), a daily task tracker (tasks that you have to do each day, for example a workout) and a file container, which helps the user to keep track of the most important files on his/her device.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about" id="about">
+            <h1 style="font-size:58px; border-bottom:5px solid white; color:white; margin-top:120px;">About</h1>
+            <div class="about-info">
+                <div class="about-p">
+                    <p style="font-size:29px; color:white;">
+                        I am a web developer currently located in Sofia, Bulgaria. I have some experience working on my own projects as well as freelancing.
+                    </p>
+                </div>
+                <div class="about-p">
+                    <p style="font-size:29px; color:white;">
+                        I also have experience working as a web developer at two different companies, doing both frontend and backend. I'm currently in my final year at Sofia High School of Mathematics.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <h1 style="color:white; font-size:58px; border-bottom:5px solid white;">Contact</h1>
+            <h3 style="color:white; font-size:28px; border-bottom:1px solid gray;">Georgi Dimitrov</h3>
+            <h3 style="color:white; font-size:28px; border-bottom:1px solid gray;">georgi.hr.dim@gmail.com</h3>
+            <h3 style="color:white; font-size:28px; border-bottom:1px solid gray;">(+359)88 446 3373</h3>
+            <div style="text-align: center;">
+                <a href="https://twitter.com/georgid623" target="_blank"><img height="50px;" style="margin:20px;" src="assets/twitter.png"></a>
+                <a href="https://www.linkedin.com/in/georgi-dimitrov-52b22a194/" target="_blank"><img height="50px;" style="margin:20px;" src="assets/linkedin.png"></a>
+                <a href="https://github.com/G060N0FF" target="_blank"><img height="50px;" style="margin:20px;" src="assets/github.png"></a>
+            </div>
+        </div>
+    </body>
+</html>
