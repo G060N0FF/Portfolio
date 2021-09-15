@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <style>
-            body, html{
+            body, html {
                 margin:0px;
                 padding:0px;
             }
@@ -12,11 +12,17 @@
                 scroll-behavior: smooth;
             }
 
-            .topnav{
+            .topnav {
                 background-color: #373737;
-                position:fixed;
-                top:0px;
-                width:100%;
+                position: fixed;
+                top: 0px;
+                width: 100%;
+            }
+            .topnav-navigation {
+                float: right;
+                height: 90px;
+                display: flex;
+                justify-content: center;
             }
 
             .home {
@@ -25,14 +31,14 @@
                 background-size: cover;
                 color: #fff;
             }
-            .centerInner{
+            .centerInner {
                 display: flex;
                 align-items: center;
             }
-            .home-text{
+            .home-text {
                 margin-left:40px;
             }
-            .home-resume{
+            .home-resume {
                 border:3px solid white;
                 border-radius:8px;
                 padding:8px 13px;
@@ -40,11 +46,11 @@
                 text-decoration: none;
                 color:white;
             }
-            .home-resume:hover{
+            .home-resume:hover {
                 text-decoration: underline;
             }
 
-            .projects{
+            .projects {
                 background-color:black;
                 display:flex;
                 justify-content: center;
@@ -52,28 +58,28 @@
                 flex-direction: column;
                 min-height: 100vh;
             }
-            .projects-grid{
+            .projects-grid {
                 margin-bottom:120px;
             }
-            .projects-ex{
+            .projects-ex {
                 border:2px solid white;
-                margin:20px 16px;
+                margin:20px 0px;
                 padding:25px;
                 border-radius:12px;
                 text-align:center;
                 display:flex;
                 align-items: center;
             }
-            .project-element{
+            .project-element {
                 display:inline-block;
                 margin:50px;
                 text-align:left;
             }
-            .smaller{
+            .smaller {
                 max-width: 400px;
             }
 
-            .skills{
+            .skills {
                 background-color: black;
                 display:flex;
                 flex-direction: column;
@@ -81,10 +87,10 @@
                 align-items: center;
                 min-height: 100vh;
             }
-            .skills-grid{
+            .skills-grid {
                 margin-bottom:120px;
             }
-            .skills-type{
+            .skills-type {
                 float:left;
                 padding:10px;
                 margin:20px 20px;
@@ -92,7 +98,7 @@
                 margin:auto;
             }
 
-            .about{
+            .about {
                 min-height: 100vh;
                 background-color:black;
                 display:flex;
@@ -100,13 +106,13 @@
                 align-items: center;
                 flex-direction: column;
             }
-            .about-p{
+            .about-p {
                 float:left;
                 max-width:340px;
                 margin:20px;
             }
 
-            .contact{
+            .contact {
                 height:100vh;
                 background-color:black;
                 display: flex;
@@ -119,23 +125,32 @@
                 .topnav-hidden {
                     display: none !important;
                 }
+                .topnav-navigation {
+                    float: left !important;
+                }
+                .topnav-navigation a {
+                    margin: 35px 6px !important;
+                }
 
-                .projects-grid{
-                    max-width: 340px;
+                .projects-grid {
+                    max-width: 320px;
                 }
-                .projects-ex{
-                    max-width: 340px;
+                .projects-ex {
+                    max-width: 320px;
                     flex-direction: column;
+                    border-width: 0px;
+                    border-top: 2px solid white !important;
+                    border-radius: 0px;
                 }
-                .project-element{
+                .project-element {
                     margin:10px;
                 }
-                .project-element img{
+                .project-element img {
                     height:150px;
                 }
 
                 
-                .home-text{
+                .home-text {
                     margin-top: 20px;
                     margin:auto;
                     text-align:center;
@@ -146,10 +161,12 @@
     <body>
         <div class="topnav">
             <h2 style="color:white; margin:30px 25px; float:left; font-size:26px" class="topnav-hidden">Georgi Dimitrov</h2>
-            <a href="#contact" style="float: right; text-decoration: none; color:white; margin:35px 10px; font-size:23px;">Contact</a>
-            <a href="#about" style="float: right; text-decoration: none; color:white; margin:35px 10px; font-size:23px">About</a>
-            <a href="#projects" style="float: right; text-decoration: none; color:white; margin:35px 10px; font-size:23px">Projects</a>
-            <a href="#skills" style="float: right; text-decoration: none; color:white; margin:35px 5px; font-size:23px">Skills</a>
+            <div class="topnav-navigation">
+                <a href="#skills" style="text-decoration: none; color:white; margin:35px 5px; font-size:23px">Skills</a>
+                <a href="#projects" style="text-decoration: none; color:white; margin:35px 10px; font-size:23px">Projects</a>
+                <a href="#about" style="text-decoration: none; color:white; margin:35px 10px; font-size:23px">About</a>
+                <a href="#contact" style="text-decoration: none; color:white; margin:35px 10px; font-size:23px;">Contact</a>
+            </div>
         </div>
 
         <div class="home centerInner">
