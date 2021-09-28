@@ -5,6 +5,7 @@
         <title>Portfolio</title>
         <style>
             body, html {
+                font-family: 'Source Sans Pro', sans-serif;
                 margin:0px;
                 padding:0px;
             }
@@ -134,6 +135,7 @@
                 }
                 .topnav-navigation a {
                     margin: 35px 8px !important;
+                    font-size: 20px;
                 }
 
                 .projects-grid {
@@ -176,7 +178,7 @@
         <div class="home centerInner">
             <div class="home-text">
                 <h1 style="color:white; font-size:48px;">GEORGI DIMITROV</h1>
-                <h2 style="color:white; font-size:34px;">Software Engineer specializing in Web Development</h2>
+                <h2 style="color:white; font-size:34px;" class='typewriter'></h2>
                 <a class="home-resume" href="assets/resume.pdf" download>Resume</a>
             </div>
         </div>
@@ -380,5 +382,24 @@
                 });
             }).scroll(); //invoke scroll-handler on page-load
         });
+    </script>
+
+    <!--Typewriter animation-->
+    <script>
+        const text = 'Software Engineer specializing in Web Development';
+        let i = 0;
+
+        function typewriter() {
+            if (i < text.length) {
+                // update the text
+                $('.typewriter').text($('.typewriter').text().slice(0, -1) + text[i] + '|');
+                i++;
+
+                // delay
+                setTimeout(typewriter, 70);
+            }
+        }
+
+        typewriter()
     </script>
 </html>
